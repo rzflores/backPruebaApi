@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "02d36e57-6b53-4119-8f4e-e13a86382cec",
+		"name": "BackPrueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12406659"
+	},
+	"item": [
+		{
+			"name": "Crear Persona",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0QGdtYWlsLmNvbSIsIm5iZiI6MTcwNzMyOTc4MCwiZXhwIjoxNzA3MzMzMzgwLCJpYXQiOjE3MDczMjk3ODB9.kdaOYxmrRPhwu9p6T_Jd-NIcNSlELgTVWB3IhRyhj9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"TipoDocumento\" : \"DNI\",\r\n     \"NumeroDocumento\" : \"12345678\",\r\n     \"Nombres\" : \"TEST\",\r\n     \"ApellidoPaterno\" : \"TEST APE\",\r\n     \"ApellidoMaterno\" : \"TES MA\",\r\n     \"NumeroTelefono\" : \"992343422\",\r\n     \"CorreoElectronico\" : \"RDLOAS@DS.COM\",\r\n     \"Direccion\" : \"ASDASDASDASD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5039/api/v1/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Personas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0QGdtYWlsLmNvbSIsIm5iZiI6MTcwNzI4NDk0NiwiZXhwIjoxNzA3Mjg4NTQ2LCJpYXQiOjE3MDcyODQ5NDZ9.Mxws-ouyQnqGLgKbNhaKuqht5oMqkEAIB0d-WSKlsbI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5039/api/v1/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener persona",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0QGdtYWlsLmNvbSIsIm5iZiI6MTcwNzI4NDk0NiwiZXhwIjoxNzA3Mjg4NTQ2LCJpYXQiOjE3MDcyODQ5NDZ9.Mxws-ouyQnqGLgKbNhaKuqht5oMqkEAIB0d-WSKlsbI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5039/api/v1/persona/b3509890-cf60-47a7-b606-46ca1d1ec212",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"persona",
+						"b3509890-cf60-47a7-b606-46ca1d1ec212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar persona",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0QGdtYWlsLmNvbSIsIm5iZiI6MTcwNzI4NDk0NiwiZXhwIjoxNzA3Mjg4NTQ2LCJpYXQiOjE3MDcyODQ5NDZ9.Mxws-ouyQnqGLgKbNhaKuqht5oMqkEAIB0d-WSKlsbI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5039/api/v1/persona/00000000-0000-0000-0000-000000000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"persona",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Persona",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0QGdtYWlsLmNvbSIsIm5iZiI6MTcwNzMyOTc4MCwiZXhwIjoxNzA3MzMzMzgwLCJpYXQiOjE3MDczMjk3ODB9.kdaOYxmrRPhwu9p6T_Jd-NIcNSlELgTVWB3IhRyhj9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\" : \"b3509890-cf60-47a7-b606-46ca1d1ec212\",\r\n     \"TipoDocumento\" : \"DNI\",\r\n     \"NumeroDocumento\" : \"22334455\",\r\n     \"Nombres\" : \"TEST\",\r\n     \"ApellidoPaterno\" : \"TEST APE\",\r\n     \"ApellidoMaterno\" : \"TES MA\",\r\n     \"NumeroTelefono\" : \"993434221\",\r\n     \"CorreoElectronico\" : \"RDLOAS@DS.COM\",\r\n     \"Direccion\" : \"ASDASDASDASD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5039/api/v1/persona/b3509890-cf60-47a7-b606-46ca1d1ec212",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"persona",
+						"b3509890-cf60-47a7-b606-46ca1d1ec212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generar token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\" : \"test@gmail.com\",\r\n    \"clave\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5039/api/v1/auth/generar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"generar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,26 @@
+CREATE DATABASE APIDB;
+go
+use APIDB 
+go
+
+CREATE LOGIN usuariotest 
+WITH PASSWORD = 'Abc1234$';
+
+CREATE USER usuariotest 
+FOR LOGIN usuariotest;
+
+ALTER ROLE db_datareader ADD MEMBER usuariotest;
+ALTER ROLE db_datawriter ADD MEMBER usuariotest;
+
+CREATE TABLE Personas (
+    id uniqueidentifier PRIMARY KEY,
+    tipo_documento VARCHAR(20),
+    numero_documento VARCHAR(20),
+    nombres VARCHAR(50),
+    apellido_paterno VARCHAR(50),
+    apellido_materno VARCHAR(50),
+    numero_telefono VARCHAR(20),
+    correo_electronico VARCHAR(100),
+    direccion VARCHAR(255),
+    eliminado INT DEFAULT 0
+);
